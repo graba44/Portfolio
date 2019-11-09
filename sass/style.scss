@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+// Variables
+$main-blue-color: #107db5;
+$darker-blue-color: #052536;
+$white-color: #ffffff;
+$black-color: #000000;
+$main-font-family: 'Roboto', sans-serif;
+
+// Reset
+*,
+*::before,
+*::after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+// Reusable classes
+.button{
+   border: none;
+   background: none;
+   cursor: pointer;
+   padding: 16px 12px;
+   font-size: .8rem;
+   text-transform: uppercase;
+   font-weight: 700;
+   text-align: center;
+   transition: all .3s ease-out;
+
+   &:focus{
+      outline: none;
+   }
+
+   &:disabled,
+   &[disabled]{
+      cursor: not-allowed;
+   }
+}
+
+.link{
+   color: inherit;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+body{
+   color: $black-color;
+   font-family: $main-font-family;
+}
+
+.container{
+   width: 100%;
+
+   .navigation{
+      width: 100%;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: $main-blue-color;
+      box-shadow: 0 0 6px 1px $black-color;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all .3s ease-out;
+
+      &__logo-text{
+            margin: 0 .5rem 0 1rem;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-transform: lowercase;
+            color: $white-color;
+         }
+
+         &__hamburger{
+            width: 35px;
+            height: 26px;
+            margin: 0 1rem 0 .5rem;
+            position: relative;
+            top: 0;
+            right: 0;
+            z-index: 1;
+
+            &-bar,
+            ::before,
+            ::after{
+               content: "";
+               width: 100%;
+               height: 4px;
+               background-color: $white-color;
+               position: absolute;
+               top: 0;
+               left: 0;
+               margin: auto;
+               border-radius: 2px;
+               transition: all .5s ease-out;
+            }
+
+            &-bar::before{
+               top: 11px;
+            }
+
+            &-bar::after{
+               top: 22px;
+            }
+
+            // Toggling class menu-active (hamburger)
+            &-bar.menu-active{
+               transform: rotate(45deg);
+               bottom: 0;
+
+               &::after{
+                  transform: rotate(450deg);
+                  top: 0;
+               }
+
+               &::before{
+                  background-color: transparent;
+               }
+            }
+         }
+
+         &__menu{
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+         }
+
+         .menu{
+            background-color: $main-blue-color;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            clip-path: circle(0% at -5% 50%);
+            transition: all .5s ease-out;
+
+            &.menu-active{
+               clip-path: circle(100%);
+               background-color: $darker-blue-color;
+            }
+
+            &__item{
+               margin: 1.5rem 1rem;
+
+               .menu__link{
+                  font-size: 1.4rem;
+                  font-weight: 700;
+                  padding: 0 .5rem;
+                  letter-spacing: 2px;
+                  color: $white-color;
+                  text-transform: lowercase;
+                  transition: color .3s ease-out;
+
+                  &:hover{
+                     color: darken($color: $white-color, $amount: 25%);
+                  }
+               }
+            }
+
+            &__icons{
+               width: 100%;
+               height: 50px;
+               display: flex;
+               justify-content: space-evenly;
+               align-items: center;
+               position: absolute;
+               left: 0;
+               bottom: 20px;
+
+               .menu__icon-link{
+                  width: 36px;
+                  height: 36px;
+                  display: block;
+               }
+
+               .menu__icon-image{
+                  width: 36px;
+                  filter: invert(1);
+                  transition: all .3s ease-out;
+
+                  &:hover{
+                     filter: invert(.75);
+                  }
+               }
+            }
+         }
+   }
+
+   .header{
+      width: 100%;
+
+      .about-me{
+         text-align: center;
+
+         &__figure{
+            width: 85%;
+            margin: 0 auto;
+            padding-top: 1.5rem;
+
+            .about-me__image{
+               width: 100%;
+               border-radius: 2px;
+            }
+         }
+
+         &__text{
+            margin: 1rem .5rem .5rem .5rem;
+            padding: 0 .5rem;
+            font-size: .9rem;
+            line-height: 1.35rem;
+            text-align: center;
+         }
+
+         &__link{
+            display: inline-block;
+            margin: 1rem;
+
+            .about-me__button{
+               min-width: 100px;
+               border-bottom: 2px solid $main-blue-color;
+               border-radius: 4px;
+               color: $main-blue-color;
+
+               &:hover{
+                  color: $white-color;
+                  background-color: $main-blue-color;
+               }
+            }
+         }
+      }
+   }
+
+   .content{
+      width: 100%;
+
+      .skills{
+         width: 100%;
+         margin-top: 1rem;
+
+         &__navigation{
+            width: 90%;
+            margin: 0 auto;
+            padding: 0 .5rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: linear-gradient(to left, $main-blue-color, $darker-blue-color);
+            border-radius: 4px;
+
+            &-item{
+               flex: 1;
+               max-width: 33%;
+               padding: .5rem;
+               cursor: pointer;
+               transition: all .3s ease-out;
+               -webkit-tap-highlight-color: transparent; // this property removes blue background on clicked item
+               filter: invert(.35);
+
+               &--active{
+                  filter: invert(0);
+               }
+
+               .skills__image{
+                  width: 100%;
+               }
+            }
+         }
+
+         &__description{
+            width: 90%;
+            padding: 0 .5rem;
+            margin: 0 auto;
+
+            &-item{
+               padding: 0;
+               opacity: 0;
+               height: 0;
+               overflow: hidden;
+               transition: opacity .5s ease-out;
+
+               &.skills-active{
+                  padding: .5rem 0;
+                  opacity: 1;
+                  height: auto;
+               }
+
+               .skills__description-title{
+                  font-size: 1.1rem;
+                  line-height: 1.25;
+                  margin-bottom: .3rem;
+                  text-transform: uppercase;
+               }
+
+               .skills__description-text{
+                  line-height: 1.25;
+                  text-align: justify;
+               }
+            }
+         }
+      }
+
+      .experience{
+         width: 100%;
+         margin: 1rem 0;
+
+         &__header{
+            padding: 2rem;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            color: $white-color;
+            background-color: $darker-blue-color;
+         }
+
+         .works{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            &__project{
+               max-width: 250px;
+               height: calc(250px + .5rem);
+               margin: 1rem 0;
+               display: flex;
+               flex-flow: row wrap;
+               justify-content: space-evenly;
+
+               &-item{
+                  flex-basis: 100%;
+                  height: 200px;
+
+                  .works__image{
+                     width: 100%;
+                     height: 100%;
+                     object-fit: cover;
+                  }
+               }
+
+               .works__link{
+                  flex-basis: 45%;
+                  margin-top: .5rem;
+
+                  .works__button{
+                     width: 100%;
+                     height: 50px;
+                     border-radius: 4px;
+                     background-color: $main-blue-color;
+                     color: $white-color;
+                     &:hover{
+                        background-color: darken($color: $main-blue-color, $amount: 5%);
+                     }
+
+                     &--darker{
+                        background-color: lighten($color: $darker-blue-color, $amount: 5%);
+
+                        &:hover{
+                           background-color: darken($color: lighten($color: $darker-blue-color, $amount: 5%), $amount: 5%);
+                        }
+                     }
+                  }
+               }
+
+            }
+         }
+      }
+
+
+      .contact{
+         width: 100%;
+         background-color: darken($color: $white-color, $amount: 10%);
+
+         &__header{
+            padding: 2rem 1rem 0 1rem;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            text-align: center;
+
+            &:nth-child(2){
+               padding-top: 0;
+               padding-bottom: .5rem;
+            }
+         }
+
+         .socials{
+            width: 100%;
+            padding: 0 1rem;
+
+            &__message{
+               padding: .5rem 0;
+               display: flex;
+               align-items: center;
+
+               .socials__link{
+                  width: 48px;
+                  height: 48px;
+                  display: block;
+
+                  .socials__icon{
+                     width: 48px;
+                  }
+               }
+
+               .socials__info{
+                  line-height: 1.5;
+                  margin: 1rem 0;
+                  padding: 1rem;
+
+                  .socials__link-text{
+                     color: $main-blue-color;
+                     transition: all .3s ease-out;
+
+                     &:hover{
+                        color: darken($color: $main-blue-color, $amount: 10%)
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      .footer{
+         width: 100%;
+         height: 200px;
+         background-color: $darker-blue-color;
+      }
+   }
+}
