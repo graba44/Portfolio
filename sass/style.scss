@@ -260,7 +260,7 @@ body{
                cursor: pointer;
                transition: all .3s ease-out;
                -webkit-tap-highlight-color: transparent; // this property removes blue background on clicked item
-               filter: invert(.35);
+               filter: invert(.25);
 
                &--active{
                   filter: invert(0);
