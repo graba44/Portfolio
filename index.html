@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Jan Grabowski - Portfolio</title>
+
+   <link rel="stylesheet" href="css/style.min.css">
+
+   <script src="scripts/app.js"></script>
+
+</head>
+
+<body>
+
+   <div class="container">
+
+      <nav class="navigation">
+         <h1 class="navigation__logo-text">Jan Grabowski</h1>
+         <button class="navigation__hamburger button">
+            <span class="navigation__hamburger-bar"></span>
+         </button>
+         <ul class="menu navigation__menu">
+            <li class="menu__item">
+               <a class="menu__link link" href="#about-me">O mnie</a>
+            </li>
+            <li class="menu__item">
+               <a class="menu__link link" href="#skills">Umiejętności</a>
+            </li>
+            <li class="menu__item">
+               <a class="menu__link link" href="#experience">Doświadczenie</a>
+            </li>
+            <li class="menu__item">
+               <a class="menu__link link" href="#contact">Kontakt</a>
+            </li>
+            <li class="menu__icons">
+               <a class="menu__icon-link link" target="_blank" href="https://github.com/graba44">
+                  <img class="menu__icon-image" src="assets/icons/github.svg" alt="GitHub">
+               </a>
+               <a class="menu__icon-link link" href="mailto:grabowsky44@gmail.com">
+                  <img class="menu__icon-image" src="assets/icons/gmail.svg" alt="Gmail">
+               </a>
+               <a class="menu__icon-link link" target="_blank" href="https://www.linkedin.com/in/jan-grabowski/">
+                  <img class="menu__icon-image" src="assets/icons/linkedin.svg" alt="LinkedIn">
+               </a>
+            </li>
+         </ul>
+      </nav>
+
+      <header class="header">
+
+         <section class="about-me" id="about-me">
+            <figure class="about-me__figure">
+               <img class="about-me__image" src="assets/me.jpg" alt="Jan Grabowski">
+            </figure>
+            <p class="about-me__text">Cześć wszystkim, mam na imię Janek. Jestem studentem Warszawskiej Wyższej Szkoły
+               Informatyki. W pracy, którą obecnie posiadam głównie zajmuję się operacjami na bazach danych, aczkolwiek
+               nie ukrywam, że niedługo chciałbym spróbować pracy na stanowisku programisty warstwy front-endowej. </p>
+            <p class="about-me__text">W szkole średniej
+               głównie programowałem w PHP z użyciem MySQL, na studiach uczymy się podstaw programowania w języku C,
+               natomiast teraz skupiam się na doskonaleniu swoich umiejętności front-endowych.
+               W przyszłości myślę o rozwoju w kierunku Full Stack Developer'a.</p>
+            <a class="about-me__link link" target="_blank"
+               href="https://drive.google.com/open?id=1mVHkij2pxhcKVmn42XrT2cMDCtlhkWT0">
+               <button class="about-me__button button">Podgląd CV</button>
+            </a>
+            <a class="about-me__link link" target="_blank" href="https://github.com/graba44">
+               <button class="about-me__button button">GitHub</button>
+            </a>
+         </section>
+
+      </header>
+
+      <main class="content">
+
+         <section class="skills skills1" id="skills">
+
+            <nav class="skills__navigation">
+               <figure class="skills__navigation-item" data-skill="HTML">
+                  <img class="skills__image" src="assets/icons/html.svg" alt="HTML">
+               </figure>
+               <figure class="skills__navigation-item" data-skill="CSS">
+                  <img class="skills__image" src="assets/icons/css.svg" alt="CSS">
+               </figure>
+               <figure class="skills__navigation-item" data-skill="JavaScript">
+                  <img class="skills__image" src="assets/icons/js.svg" alt="JavaScript">
+               </figure>
+               <figure class="skills__navigation-item" data-skill="Git">
+                  <img class="skills__image" src="assets/icons/git.svg" alt="Git">
+               </figure>
+            </nav>
+
+            <aside class="skills__description">
+               <div class="skills__description-item" data-skill="HTML">
+                  <h3 class="skills__description-title">HTML</h3>
+                  <p class="skills__description-text">Ciągle doskonale ten język i poznaje coraz to nowsze jego tajniki.
+                     W większości projektów stosuję metodologię BEM, która umożliwia logiczny porządek w kodzie. Zawsze
+                     staram się, aby kod był jak najbardziej semantyczny. Innym ważnym dla mnie aspektem jest
+                     przejrzystość struktury HTML'a.</p>
+               </div>
+               <div class="skills__description-item" data-skill="CSS">
+                  <h3 class="skills__description-title">CSS</h3>
+                  <p class="skills__description-text">W swoich pracach zazwyczaj stosuję preprocesor CSS'a o nazwie
+                     SASS. W połączeniu ze wcześniej wymienioną metodologią BEM, SASS pozwala na jeszcze wiekszą
+                     logiczność w kodzie, która przy większych projektach jest naprawdę ważna. Pojęcia takie jak Grid,
+                     Flexbox, kaskadowość, RWD czy Bootstrap nie są mi obce, stale używam i doskonalę te umiejętności.
+                  </p>
+               </div>
+               <div class="skills__description-item" data-skill="JavaScript">
+                  <h3 class="skills__description-title">JavaScript</h3>
+                  <p class="skills__description-text">To pierwszy język programowania, który poznałem. Zainteresował
+                     mnie na tyle, że doskonalę go do dnia dzisiejszego. Posiadam podstawową wiedzę o jQuery, ponieważ
+                     głównie uczyłem się czystego JS'a. Piszę bardziej lub mniej skomplikowane skrypty o różnym
+                     działaniu. Niedługo mam zamiar rozpocząć naukę React'a.</p>
+               </div>
+               <div class="skills__description-item" data-skill="Git">
+                  <h3 class="skills__description-title">Systemy kontroli wersji</h3>
+                  <p class="skills__description-text">Z Git'a korzystam bardzo często, każdy projekt czy zadanie warte
+                     uwagi dodaję na Github'a. Dzięki temu mogę śledzić swoje postępy oraz rozwijać się. Oprócz Git'a
+                     znam w podstawowym stopniu TortoiseSVN, z którego korzystam na co dzień w pracy.</p>
+               </div>
+            </aside>
+
+         </section>
+
+         <section class="skills skills2">
+
+            <nav class="skills__navigation">
+               <figure class="skills__navigation-item" data-skill="Databases">
+                  <img class="skills__image" src="assets/icons/databases.svg" alt="Databases">
+               </figure>
+               <figure class="skills__navigation-item" data-skill="PHP">
+                  <img class="skills__image" src="assets/icons/php.svg" alt="PHP">
+               </figure>
+               <figure class="skills__navigation-item" data-skill="SQL">
+                  <img class="skills__image" src="assets/icons/sql.svg" alt="SQL">
+               </figure>
+               <figure class="skills__navigation-item" data-skill="C/C++">
+                  <img class="skills__image" src="assets/icons/c++.svg" alt="C/C++">
+               </figure>
+            </nav>
+
+            <aside class="skills__description">
+               <div class="skills__description-item" data-skill="Databases">
+                  <h3 class="skills__description-title">Systemy zarządzania relacyjnymi bazami danych</h3>
+                  <p class="skills__description-text">W pracy głównie używam Oracle'a oraz Sybase'a. Korzystanie z tych
+                     systemów bazodanowych nie jest mi obce, codziennie wykonuje dużą ilość zapytań. W pewnym stopniu
+                     znam również MySQL'a, którego głównie używałem chodząc do szkoły średniej.</p>
+               </div>
+               <div class="skills__description-item" data-skill="PHP">
+                  <h3 class="skills__description-title">PHP</h3>
+                  <p class="skills__description-text">Moja wiedza o PHP jest dosyć szkolna. Potrafię wykonywać proste
+                     działania w tym języku programowania takie jak: zrobienie formularza rejestracyjnego, systemy
+                     logowania.</p>
+               </div>
+               <div class="skills__description-item" data-skill="SQL">
+                  <h3 class="skills__description-title">SQL</h3>
+                  <p class="skills__description-text">Codziennie w pracy mam styczność z tym językiem. Rozwiązuje
+                     problemy użytkowników firmy, pisząc rozmaite zapytania do baz danych. Często korzystam z PL/SQL'a,
+                     aczkolwiek wiedza na temat tego rozszerzenia ogranicza się do podstaw. Posiadam stały kontakt z
+                     developer'ami aplikacji, dzięki temu praca jest o wiele łatwiejsza. Chciałbym powiększyć
+                     swoją wiedzę, dlatego w przyszłości myślę o nauce kolejnego rozszerzenia, czyli T-SQL.</p>
+               </div>
+               <div class="skills__description-item" data-skill="C/C++">
+                  <h3 class="skills__description-title">C/C++</h3>
+                  <p class="skills__description-text">Umiejętności na poziomie podstawowym, w szkole średniej szkoliłem
+                     się z zakresu C++, teraz na studiach jest to C.</p>
+               </div>
+            </aside>
+
+         </section>
+
+         <section class="experience" id="experience">
+
+            <h2 class="experience__header">Doświadczenie</h2>
+
+            <section class="works">
+
+               <div class="works__project">
+                  <figure class="works__project-item">
+                     <img class="works__image" src="assets/project-images/pbf.png" alt="PerfectBodyFit">
+                  </figure>
+                  <a class="works__link link" target="_blank" href="http://www.perfectbodyfit.pl/">
+                     <button class="works__button button">Live</button>
+                  </a>
+                  <a class="works__link link" target="_blank" href="https://github.com/graba44">
+                     <button class="works__button works__button--darker button" disabled>GitHub</button>
+                  </a>
+               </div>
+
+               <div class="works__project">
+                  <figure class="works__project-item">
+                     <img class="works__image" src="assets/project-images/tennis-game.PNG" alt="Tennis Game">
+                  </figure>
+                  <a class="works__link link" target="_blank" href="https://graba44.github.io/Tennis-Game/index.html">
+                     <button class="works__button button">Live</button>
+                  </a>
+                  <a class="works__link link" target="_blank" href="https://github.com/graba44/Tennis-Game">
+                     <button class="works__button works__button--darker button">GitHub</button>
+                  </a>
+               </div>
+
+            </section>
+
+         </section>
+
+         <section class="contact" id="contact">
+            <h2 class="contact__header">Jakieś pytania?</h2>
+            <h2 class="contact__header">Skontaktuj się ze mną!</h2>
+            <section class="socials">
+               <div class="socials__message">
+                  <a class="socials__link" href="mailto:grabowsky44@gmail.com">
+                     <img class="socials__icon" src="assets/icons/gmail-color.svg" alt="Gmail">
+                  </a>
+                  <p class="socials__info">Najszybszą metodą będzię kontakt poprzez e-mail. Proszę wyślij go na ten
+                     adres
+                     <a class="socials__link-text link" href="mailto:grabowsky44@gmail.com">grabowsky44@gmail.com</a>
+                  </p>
+               </div>
+               <div class="socials__message">
+                  <a class="socials__link" target="_blank" href="https://www.linkedin.com/in/jan-grabowski/">
+                     <img class="socials__icon" src="assets/icons/linkedin-color.svg" alt="LinkedIn">
+                  </a>
+                  <p class="socials__info">Zaproś mnie do kontaktów na platformie LinkedIn, tam możemy pisać oraz
+                     pozostać w stałym kontakcie.</p>
+               </div>
+            </section>
+         </section>
+
+         <footer class="footer">
+            s
+         </footer>
+
+      </main>
+
+   </div>
+
+</body>
+
+</html>
