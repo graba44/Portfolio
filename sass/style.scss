@@ -96,7 +96,7 @@ body{
                left: 0;
                margin: auto;
                border-radius: 2px;
-               transition: all .5s ease-out;
+               transition: all .3s ease-out;
             }
 
             &-bar::before{
@@ -109,11 +109,11 @@ body{
 
             // Toggling class menu-active (hamburger)
             &-bar.menu-active{
-               transform: rotate(45deg);
+               transform: rotate(-45deg);
                bottom: 0;
 
                &::after{
-                  transform: rotate(450deg);
+                  transform: rotate(90deg);
                   top: 0;
                }
 
@@ -135,8 +135,8 @@ body{
             background-color: $main-blue-color;
             list-style: none;
             display: flex;
-            flex-direction: column;
             justify-content: center;
+            flex-direction: column;
             clip-path: circle(0% at -5% 50%);
             transition: all .5s ease-out;
 
@@ -155,10 +155,10 @@ body{
                   letter-spacing: 2px;
                   color: $white-color;
                   text-transform: lowercase;
-                  transition: color .3s ease-out;
+                  transition: all .3s ease-out;
 
                   &:hover{
-                     color: darken($color: $white-color, $amount: 25%);
+                     color: darken($color: $white-color, $amount: 30%);
                   }
                }
             }
@@ -166,14 +166,15 @@ body{
             &__icons{
                width: 100%;
                height: 50px;
-               display: flex;
-               justify-content: space-evenly;
-               align-items: center;
                position: absolute;
                left: 0;
-               bottom: 20px;
+               bottom: 25px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
 
                .menu__icon-link{
+                  margin: 0 1.5rem;
                   width: 36px;
                   height: 36px;
                   display: block;
@@ -185,7 +186,7 @@ body{
                   transition: all .3s ease-out;
 
                   &:hover{
-                     filter: invert(.75);
+                     filter: invert(.7);
                   }
                }
             }
@@ -213,7 +214,7 @@ body{
             margin: 1rem .5rem .5rem .5rem;
             padding: 0 .5rem;
             font-size: .9rem;
-            line-height: 1.35rem;
+            line-height: 1.35;
             text-align: center;
          }
 
@@ -243,6 +244,17 @@ body{
          width: 100%;
          margin-top: 1rem;
 
+         &__header{
+               padding: 2rem;
+               margin-bottom: 1rem;
+               font-size: 1.3rem;
+               letter-spacing: 1px;
+               text-transform: uppercase;
+               text-align: center;
+               color: $white-color;
+               background-color: $darker-blue-color;
+         }
+
          &__navigation{
             width: 90%;
             margin: 0 auto;
@@ -258,12 +270,12 @@ body{
                max-width: 33%;
                padding: .5rem;
                cursor: pointer;
-               transition: all .3s ease-out;
+               transition: all .5s ease-out;
                -webkit-tap-highlight-color: transparent; // this property removes blue background on clicked item
-               filter: invert(.25);
+               opacity: .4;
 
                &--active{
-                  filter: invert(0);
+                  opacity: 1;
                }
 
                .skills__image{
@@ -298,6 +310,7 @@ body{
                }
 
                .skills__description-text{
+                  font-size: .9rem;
                   line-height: 1.25;
                   text-align: justify;
                }
@@ -409,7 +422,7 @@ body{
                }
 
                .socials__info{
-                  line-height: 1.5;
+                  line-height: 1.35;
                   margin: 1rem 0;
                   padding: 1rem;
 
@@ -418,7 +431,7 @@ body{
                      transition: all .3s ease-out;
 
                      &:hover{
-                        color: darken($color: $main-blue-color, $amount: 10%)
+                        color: darken($color: $main-blue-color, $amount: 15%)
                      }
                   }
                }
